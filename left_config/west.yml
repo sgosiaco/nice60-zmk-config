@@ -1,0 +1,11 @@
+manifest:
+  remotes:
+    - name: sgosiaco
+      url-base: https://github.com/sgosiaco
+  projects:
+    - name: zmk
+      remote: sgosiaco
+      revision: feature/leftCol
+      import: app/west.yml
+  self:
+    path: config

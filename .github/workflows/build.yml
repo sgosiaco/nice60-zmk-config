@@ -1,5 +1,13 @@
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  build:
+  build_left:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      config_path: left_config
+      archive_name: left_firmware
+  build_middle:
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      config_path: middle_config
+      archive_name: middle_firmware
