@@ -1,0 +1,12 @@
+base: &base
+  - board: nice60
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+
+include:
+  - <<: *base
+    config-path: left_config
+    artifact-name: left_firmware
+  - <<: *base
+    config-path: middle_config
+    artifact-name: middle_firmware
